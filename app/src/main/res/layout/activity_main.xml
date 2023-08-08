@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#faebd7"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-26dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop Online"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/_5sdp"
+            android:textColor="#3CC032"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold" />
+        <FrameLayout
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp">
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/favorite" />
+
+            <TextView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:textSize="@dimen/_8ssp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="@dimen/_1sdp"
+                android:background="@drawable/edit_notify"
+                android:text="9"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp">
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/shopping_cart" />
+
+            <TextView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:textSize="@dimen/_8ssp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="@dimen/_1sdp"
+                android:background="@drawable/edit_notify"
+                android:text="0"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/white" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/callphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#faebd7"
+        android:tintMode="@color/green"
+        android:src="@drawable/phone"
+        app:fabCustomSize="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/navigation_bottom"
+        android:background="#f0f8ff"
+        app:itemTextColor="@color/edit_bottomnavigation"
+        app:itemIconTint="@color/edit_bottomnavigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
